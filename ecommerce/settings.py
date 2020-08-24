@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'crispy_forms', # for using bootstrap
     #my apps
-    'products'
+    'products',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4' # for bootstrap
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

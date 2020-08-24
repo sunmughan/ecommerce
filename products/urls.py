@@ -11,11 +11,13 @@ from .views import (ProductListView,
 
 
 urlpatterns = [
-    path("", ProductListView.as_view()),
-    path("fbv/", product_list_view),
-    path("<int:pk>/", ProductDetailView.as_view()),
-    path('fbv/<int:pk>/', product_detail_view),
-    path('featured/', ProductFeaturedListView.as_view()),
-    path('featured/<int:pk>/', ProductFeaturedDetailView.as_view()),
-    path('slug/', ProductDetailSlugView.as_view())
+    path("", ProductListView.as_view(), name='list'),
+    path('<slug:slug>/', ProductDetailSlugView.as_view(), name='detail'),
+    # path("<int:pk>/", ProductDetailView.as_view(), name='detail'),
+
+    # path("fbv/", product_list_view),
+    # path('fbv/<int:pk>/', product_detail_view),
+    # path('featured/', ProductFeaturedListView.as_view()),
+    # path('featured/<int:pk>/', ProductFeaturedDetailView.as_view()),
+
 ]
