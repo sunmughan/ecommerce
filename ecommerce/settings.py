@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms', # for using bootstrap
     #my apps
     'products',
+    'search'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # for bootstrap
