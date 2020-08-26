@@ -6,6 +6,7 @@ from .forms import ContactForm, LoginForm, RegisterForm
 
 
 def home_page(request):
+    print(request.session.get('cart_id'))
     context = {
         "title": "Hello World",
         "Content": "Welcome to the homepage"

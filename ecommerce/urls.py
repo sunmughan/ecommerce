@@ -22,6 +22,7 @@ from django.views.generic import TemplateView
 from django.urls import path, include
 
 from .views import home_page, about_page, contact_page, login_page, register_page
+from tags.views import tag_home
 
 
 urlpatterns = [
@@ -34,6 +35,8 @@ urlpatterns = [
 
     path('products/', include(('products.urls','products'), namespace='products')),
     path('search/', include(('search.urls', 'search'), namespace='search')),
+    path('carts/', include(('carts.urls', 'carts'), namespace='cart')),
+    path('tag/', tag_home),
 
     path('admin/', admin.site.urls),
 ]
